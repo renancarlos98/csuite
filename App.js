@@ -8,6 +8,8 @@ import CsuiteInit from './src/screens/CsuiteInit';
 import TalkInit from './src/screens/TalkInit';
 import Ccalc from './src/screens/Ccalc';
 import TalkClass from './src/screens/TalkClass';
+import ClassCompleted from './src/screens/ClassCompleted';
+import ClassTalk from './src/screens/ClassTalk';
 
 const AppStackNavigator = createStackNavigator({
   CsuiteInit:{
@@ -30,6 +32,12 @@ const AppStackNavigator = createStackNavigator({
   },
   TalkClass:{
     screen: TalkClass
+  },
+  ClassTalk:{
+    screen: ClassTalk
+  },
+  ClassCompleted:{
+    screen:ClassCompleted
   }
 })
     const App= createAppContainer(AppStackNavigator);

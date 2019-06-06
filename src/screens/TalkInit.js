@@ -13,8 +13,7 @@ import {
   TouchEvent,
   CheckBox
 } from 'react-native';
-
-
+import { Icon } from 'native-base';
 
 const {width: WIDTH} = Dimensions.get('screen')
 export default class TalkInit extends Component {
@@ -39,20 +38,32 @@ export default class TalkInit extends Component {
     return(
     <View style={styles.container}>
       <View style={styles.loginArea}>
+        
         <Text style={styles.title}>LOGIN</Text>
-        <TextInput style={styles.input} placeholder='Username'/>
-        <TextInput style={styles.input} placeholder='Password'/>
+          <TextInput style={styles.input} placeholder='Username'/>
+          <TextInput style={styles.input} placeholder='Password'/>
         <View style={{flexDirection: 'row'}}>
+          
             <CheckBox size={30}value={this.state.check} onChange={()=> this.checkBox()}/>
             <Text style={styles.check}>Remember Me</Text>
             <TouchableOpacity onPress={()=>this.props.navigation.navigate('TalkClass')}>
             <View style={styles.sign}>
-                <Text style={{alignSelf:'center', color:'black', fontSize:20, fontWeight:'bold'}}>Sign In</Text>
+                <Text style={{alignSelf:'center', color:'white', fontSize:20, fontWeight:'bold'}}>Sign In</Text>
             </View>
             </TouchableOpacity>
-            
         </View>
-
+        <TouchableOpacity>
+        <View style={styles.loginGoogle}>
+         <Icon type="AntDesign" name="google" style={{color:'white'}}/>
+        <Text style={{fontSize:20, marginLeft:10, color:'white'}}>Login with Google</Text>
+        </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+        <View style={styles.loginFacebook}>
+        <Icon type="AntDesign" name="facebook-square" style={{color:'white'}}/>
+        <Text style={{fontSize:20, marginLeft:10, color:'white'}}>Login with Facebook</Text>
+        </View>
+        </TouchableOpacity>
         
       </View>
     </View>
@@ -98,7 +109,7 @@ const styles=StyleSheet.create({
   sign:{
       width:120,
       height:50,
-      backgroundColor:'gray',
+      backgroundColor:'#3B5999',
       justifyContent:'center',
       padding:5,
       marginLeft: 50,
@@ -107,8 +118,31 @@ const styles=StyleSheet.create({
       elevation:10,
       margin:10
   },
-  
+  loginGoogle:{
+    backgroundColor:'#DC404B',
+    padding:5,
+    justifyContent:'center',
+    alignSelf:'center',
+    flexDirection:'row',
+    width:WIDTH-60,
+    height:50,
+    borderWidth:1,
+    margin:10,
+    elevation:8,
+    borderRadius:5
+  },
 
-  
-
+  loginFacebook:{
+    backgroundColor:'#3B5999',
+    padding:5,
+    justifyContent:'center',
+    alignSelf:'center',
+    flexDirection:'row',
+    width:WIDTH-60,
+    height:50,
+    borderWidth:1,
+    margin:10,
+    elevation:8,
+    borderRadius:5
+  }
 })

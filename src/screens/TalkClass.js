@@ -26,17 +26,17 @@ export default class TalkClass extends Component {
     <View style={styles.container}>
         <Text style={styles.title}>MODULES:</Text>
         <View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>this.props.navigation.navigate('ClassTalk')}>
             <View style={styles.module}>
                 <Text style={styles.text}>Module 1</Text>
             </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>this.props.navigation.navigate('ClassTalk')}>
             <View style={styles.module}>
                 <Text style={styles.text}>Module 2</Text>
             </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>this.props.navigation.navigate('ClassTalk')}>
             <View style={styles.module}>
                 <Text style={styles.text}>Module 3</Text>
             </View>
@@ -56,7 +56,7 @@ const styles=StyleSheet.create({
   module:{
       width:WIDTH-20,
       height: 150,
-      backgroundColor:'#001252',
+      backgroundColor:'#3B5999',
       margin:15,
       borderRadius: 10,
       alignSelf: 'center',

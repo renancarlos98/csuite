@@ -12,4 +12,6 @@ import TalkInit from './src/screens/TalkInit';
 import CsuitInit from './src/screens/CsuiteInit';
 import Ccalc from './src/screens/Ccalc';
 import TalkClass from './src/screens/TalkClass';
+import ClassTalk from './src/screens/ClassTalk';
+import ClassCompleted from './src/screens/ClassCompleted';
 AppRegistry.registerComponent(appName, () => App);
